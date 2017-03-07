@@ -4,17 +4,26 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
+import { CommuneService } from './commune/commune.service';
+import { CommuneComponent } from './commune/commune.component';
+
+import { DepartementService } from './departement/departement.service';
+import { DepartementComponent } from './departement/departement.component';
+
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    CommuneComponent,
+    DepartementComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule
   ],
-  providers: [],
+  providers: [CommuneService,
+              DepartementService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

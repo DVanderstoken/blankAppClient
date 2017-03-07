@@ -1,3 +1,11 @@
-<h1>
-  {{title}}
-</h1>
+<div [hidden]="!isLoading">
+	<div class="title">loading datas...</div>
+	<div class="spinner">
+		<div class="double-bounce1"></div>
+		<div class="double-bounce2"></div>
+	</div>
+</div>
+<div [hidden]="isLoading">
+	<div class="title">Ready to go !</div>
+	<app-dept></app-dept>
+</div>
